@@ -1,0 +1,26 @@
+using System;
+
+namespace URI
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            //velocidade X
+            int x = 60;
+            //velocidade Y
+            int y = 90;
+            //distância entre X e Y passada em km
+            double d = Convert.ToDouble(Console.ReadLine());
+            //vendo a diferença de distância ente x e y em KM
+            double dKm = y-x;
+            //vendo a diferença de distância ente x e y em horas
+            double tH = dKm/d;
+            //vendo a diferença de distância ente x e y em minutos
+            double tM = (60/60)/tH*60;
+
+	        Console.WriteLine("{0} minutos",tM.ToString("0"));
+        }
+    }
+}
+
