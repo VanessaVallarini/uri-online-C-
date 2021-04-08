@@ -1,0 +1,21 @@
+using System;
+
+namespace URI
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {            
+            int tempoViagemH = int.Parse(Console.ReadLine());
+            int velMediaH = int.Parse(Console.ReadLine());
+
+            //o carro faz 12KM com 1L
+            double litrosKMCarro = 12;
+            double distancia = tempoViagemH * velMediaH;
+            double litros = distancia / litrosKMCarro;
+
+            Console.WriteLine("{0}", litros.ToString("0.000"));
+        }
+    }
+}
+
