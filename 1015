@@ -1,0 +1,28 @@
+using System;
+
+namespace URI
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            string[] eixos = Console.ReadLine().Split(' ');
+            string[] planos = Console.ReadLine().Split(' ');
+
+            double x1 = Convert.ToDouble(eixos[0]);
+            double y1 = Convert.ToDouble(eixos[1]);
+            double x2 = Convert.ToDouble(planos[0]);
+            double y2 = Convert.ToDouble(planos[1]);
+
+            double distancia = Math.Sqrt(Math.Pow(x2-x1, 2) + Math.Pow(y2-y1, 2));
+
+            Console.WriteLine("{0}", distancia.ToString("0.0000"));
+            
+
+
+
+
+        }
+    }
+}
+
