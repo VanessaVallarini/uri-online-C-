@@ -1,0 +1,27 @@
+using System;
+
+namespace URI
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            double A, B;
+
+            //entrada de valores
+            do{
+                A = Double.Parse((Console.ReadLine()));
+                B = Double.Parse((Console.ReadLine()));
+            }while (A < 0 || B < 0 || A > 10 || B > 10);
+
+            //mantendo apenas uma casa decimal
+            double doubleA = Math.Round(A, 1);
+            double doubleB = Math.Round(B, 1);
+
+            //calculando a média
+            double media = (A*3.5+B*7.5)/11;  
+
+            Console.WriteLine("MEDIA = {0}", media.ToString("0.00000"));
+        }
+    }
+}

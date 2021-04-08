@@ -1,0 +1,22 @@
+using System;
+
+namespace URI
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {                    
+            string[] ent = Console.ReadLine().Split(' ');
+            
+            int a = int.Parse(ent[0]);
+            int b = int.Parse(ent[1]);
+            int c = int.Parse(ent[2]);
+
+            int maior = (a+b+Math.Abs(a-b))/2;
+
+            Console.WriteLine("{0} eh o maior", Math.Max(maior, c) );
+
+        }
+    }
+}
+

@@ -1,0 +1,22 @@
+using System;
+
+namespace URI
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {            
+            string[] ent1 = Console.ReadLine().Split(' ');
+            int qtd1 = int.Parse(ent1[1]);
+            double valorUnit1 = Convert.ToDouble(ent1[2]);
+
+            string[] ent2 = Console.ReadLine().Split(' ');
+            int qtd2 = int.Parse(ent2[1]);
+            double valorUnit2 = Convert.ToDouble(ent2[2]);
+            
+            double total = (valorUnit1*qtd1)+(valorUnit2*qtd2);
+            Console.WriteLine("VALOR A PAGAR: R$ {0}", total.ToString("0.00"));
+
+        }
+    }
+}

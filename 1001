@@ -1,0 +1,15 @@
+using System;
+
+namespace URI
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            string A = Console.ReadLine();
+            string B = Console.ReadLine();
+            int X = Int32.Parse(A) + Int32.Parse(B);
+            Console.WriteLine("X = {0}", X);
+        }
+    }
+}

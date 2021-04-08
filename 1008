@@ -1,0 +1,22 @@
+using System;
+
+namespace URI
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            try{
+                int number = int.Parse(Console.ReadLine());
+                int hours = int.Parse(Console.ReadLine());
+                double hourValue = Convert.ToDouble(Console.ReadLine());
+                double salary =  Convert.ToDouble(hours*hourValue);
+                Console.WriteLine("NUMBER = {0}", number);
+                Console.WriteLine("SALARY = U$ {0}", salary.ToString("0.00"));
+                
+            } catch (Exception){
+                Console.WriteLine("Insira 2 valores inteiros e o último deve ser double!");
+            }
+        }
+    }
+}

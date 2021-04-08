@@ -1,0 +1,15 @@
+using System;
+
+namespace URI
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {            
+            double raio = Convert.ToDouble(Console.ReadLine());
+            double volume = (4/3.0) * 3.14159 * Math.Pow(raio, 3);
+            Console.WriteLine("VOLUME = {0}", volume.ToString("0.000"));
+
+        }
+    }
+}

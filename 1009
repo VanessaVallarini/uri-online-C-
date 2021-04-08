@@ -1,0 +1,19 @@
+using System;
+
+namespace URI
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            string nome = Console.ReadLine();
+            double salarioFixo = Convert.ToDouble(Console.ReadLine());
+            double totalVendas = Convert.ToDouble(Console.ReadLine());
+
+            double comissao = totalVendas * 0.15;
+            double total = Math.Round(salarioFixo + comissao, 2);
+
+            Console.WriteLine("TOTAL = R$ {0}", total.ToString("0.00"));
+        }
+    }
+}

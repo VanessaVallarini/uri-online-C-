@@ -1,0 +1,14 @@
+using System;
+
+namespace URI
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int A = Int32.Parse(Console.ReadLine());
+            int B = Int32.Parse(Console.ReadLine());
+            Console.WriteLine("PROD = {0}", A*B);
+        }
+    }
+}

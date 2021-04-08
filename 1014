@@ -1,0 +1,19 @@
+using System;
+
+namespace URI
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {                    
+            int X = int.Parse(Console.ReadLine());
+            double Y = double.Parse(Console.ReadLine());
+
+            double consumo = X / Y;
+
+            Console.WriteLine("{0} km/l", consumo.ToString("0.000"));
+
+        }
+    }
+}
+
