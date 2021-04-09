@@ -1,0 +1,24 @@
+using System;
+using System.Globalization;
+using System.Threading;
+using static System.Console;
+
+namespace URI
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {   
+            int idade = int.Parse(Console.ReadLine());
+            int a = idade / 365;
+            //se dividirmos por 30 temos a qts de meses, pq cada mes tem 30 dias
+            int m = ((idade % 365) / 30);
+            //o resto dos meses são os dias
+            int d = (idade % 365) % 30;
+            Console.WriteLine("{0} ano(s)", a);
+            Console.WriteLine("{0} mes(es)", m);
+            Console.WriteLine("{0} dia(s)", d);
+        }
+    }
+}
+
