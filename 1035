@@ -1,0 +1,43 @@
+using System;
+using System.Globalization;
+using System.Threading;
+using static System.Console;
+
+namespace URI
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int a = 0, b = 0, c = 0, d = 0;
+            string[] ent;
+            bool entrada = false;
+
+            while (entrada == false)
+            {
+                ent = Console.ReadLine().Split(' ');
+                if (ent.Length == 4)
+                {
+                    a = Convert.ToInt32(ent[0]);
+                    b = Convert.ToInt32(ent[1]);
+                    c = Convert.ToInt32(ent[2]);
+                    d = Convert.ToInt32(ent[3]);
+                    entrada = true;
+                    if ((b > c) && (d > a) && ((c + d) > (a + b)) && (c > 0 && d > 0) && (a % 2 == 0))
+                    {
+                        Console.WriteLine("Valores aceitos");
+                    }
+                    else
+                    {
+                        Console.WriteLine("Valores nao aceitos");
+                    }
+                }
+                else
+                {
+                    entrada = false;
+                }
+            }
+        }
+    }
+}
+
