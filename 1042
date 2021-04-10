@@ -1,0 +1,41 @@
+using System;
+using System.Globalization;
+using System.Threading;
+using static System.Console;
+using System.Collections.Generic;
+
+namespace URI
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            string[] ent;
+            int[] n = new int[3];
+            int cont = 0;
+
+            ent = Console.ReadLine().Split(' ');
+
+            foreach (string i in ent)
+            {
+                n[cont] = Convert.ToInt32(i);
+                cont++;
+            }
+
+            Array.Sort(n);
+
+            for (int i = 0; i < n.Length; i++)
+            {
+                Console.WriteLine(n[i]);
+            }
+
+            Console.WriteLine();
+
+            foreach (string i in ent)
+            {
+                Console.WriteLine(i);
+            }
+        }
+    }
+}
+

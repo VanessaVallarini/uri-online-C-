@@ -1,0 +1,53 @@
+using System;
+using System.Globalization;
+using System.Threading;
+using static System.Console;
+
+namespace URI
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            string[] ent;
+            double n1, n2, n3, n4, media, notaExame, mediaFinal;
+
+            do
+            {
+                ent = Console.ReadLine().Split(' ');
+            } while (ent.Length != 4);
+
+            n1 = Convert.ToDouble(ent[0]);
+            n2 = Convert.ToDouble(ent[1]);
+            n3 = Convert.ToDouble(ent[2]);
+            n4 = Convert.ToDouble(ent[3]);
+
+            media = (((n1*2)+(n2*3)+(n3*4)+(n4*1))/(2+3+4+1));
+            double t = Math.Truncate(media*100)/100;
+
+            if(media >= 7.0){
+                Console.WriteLine("Media: {0}", t.ToString("0.0"));
+                Console.WriteLine("Aluno aprovado.");
+            } else if(media < 5.0){
+                Console.WriteLine("Media: {0}", t.ToString("0.0"));
+                Console.WriteLine("Aluno reprovado.");
+            } else{
+                Console.WriteLine("Media: {0}", t.ToString("0.0"));
+                Console.WriteLine("Aluno em exame.");
+                notaExame = Convert.ToDouble(Console.ReadLine());
+                Console.WriteLine("Nota do exame: {0}", notaExame.ToString("0.0"));
+                mediaFinal = ((media + notaExame) / 2);
+                double t2 = Math.Truncate(mediaFinal*100)/100;
+                if(mediaFinal > 5.0){
+                    Console.WriteLine("Aluno aprovado.");
+                    Console.WriteLine("Media final: {0}", t2.ToString("0.0"));
+                } else {
+                    Console.WriteLine("Aluno reprovado.");
+                    Console.WriteLine("Media final: {0}", t2.ToString("0.0"));
+                    Console.ReadKey();
+                }
+            }
+        }
+    }
+}
+
