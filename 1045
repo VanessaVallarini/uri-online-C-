@@ -1,0 +1,64 @@
+using System;
+using System.Globalization;
+using System.Threading;
+using static System.Console;
+using System.Collections.Generic;
+
+namespace URI
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            string[] ent;
+            double[] entD = new double[3];
+            int cont = 0;
+            double a, b, c;
+
+            do
+            {
+                ent = Console.ReadLine().Split(' ');
+            } while (ent.Length != 3);
+
+            foreach (string i in ent)
+            {
+                entD[cont] = Convert.ToDouble(i);
+                cont++;
+            }
+
+            Array.Sort(entD);
+            c = entD[0];
+            b = entD[1];
+            a = entD[2];
+
+            if (a >= b + c)
+            {
+                Console.WriteLine("NAO FORMA TRIANGULO");
+            }
+            else
+            {
+                if (Math.Pow(a, 2.0) == (Math.Pow(b, 2.0) + Math.Pow(c, 2.0)))
+                {
+                    Console.WriteLine("TRIANGULO RETANGULO");
+                }
+                if (Math.Pow(a, 2.0) > (Math.Pow(b, 2.0) + Math.Pow(c, 2.0)))
+                {
+                    Console.WriteLine("TRIANGULO OBTUSANGULO");
+                }
+                if (Math.Pow(a, 2.0) < (Math.Pow(b, 2.0) + Math.Pow(c, 2.0)))
+                {
+                    Console.WriteLine("TRIANGULO ACUTANGULO");
+                }
+                if (a == b && b == c)
+                {
+                    Console.WriteLine("TRIANGULO EQUILATERO");
+                }
+                if (a == b && c != a || b == c && a != b || c == a && b != c)
+                {
+                    Console.WriteLine("TRIANGULO ISOSCELES");
+                }
+            }
+        }
+    }
+}
+

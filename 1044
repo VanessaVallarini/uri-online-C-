@@ -1,0 +1,31 @@
+using System;
+using System.Globalization;
+using System.Threading;
+using static System.Console;
+using System.Collections.Generic;
+
+namespace URI
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            string[] ent;
+            int n1, n2;
+
+            ent = Console.ReadLine().Split(' ');
+            n1 = Convert.ToInt32(ent[0]);
+            n2 = Convert.ToInt32(ent[1]);
+
+            if (n1 % n2 == 0 || n2 % n1 == 0)
+            {
+                Console.WriteLine("Sao Multiplos");
+            }
+            else
+            {
+                Console.WriteLine("Nao sao Multiplos");
+            }
+        }
+    }
+}
+

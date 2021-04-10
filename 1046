@@ -1,0 +1,38 @@
+using System;
+using System.Globalization;
+using System.Threading;
+using static System.Console;
+using System.Collections.Generic;
+
+namespace URI
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            string[] ent;
+            int[] entD = new int[2];
+            int inicio, fim, res;
+
+            do
+            {
+                ent = Console.ReadLine().Split(' ');
+            } while (ent.Length != 2);
+
+            inicio = Convert.ToInt32(ent[0]);
+            fim = Convert.ToInt32(ent[1]);
+
+            if(inicio > fim){
+                res = (24-inicio)+fim;
+                Console.WriteLine("O JOGO DUROU {0} HORA(S)", res);
+            } else if(inicio < fim){
+                res = fim-inicio;
+                Console.WriteLine("O JOGO DUROU {0} HORA(S)", res);
+            } else{
+                Console.WriteLine("O JOGO DUROU 24 HORA(S)");
+            }
+
+        }
+    }
+}
+

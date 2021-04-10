@@ -1,0 +1,39 @@
+using System;
+using System.Globalization;
+using System.Threading;
+using static System.Console;
+using System.Collections.Generic;
+
+namespace URI
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            string[] reais;
+            int[] reaisInt = new int[3];
+            double a, b, c, t;
+
+            do
+            {
+                reais = Console.ReadLine().Split(' ');
+
+                a = Convert.ToDouble(reais[0]);
+                b = Convert.ToDouble(reais[1]);
+                c = Convert.ToDouble(reais[2]);
+            } while (a < 0 && b < 0 && c < 0);
+
+            if (a + b > c && b + c > a && a + c > b)
+            {
+                double perimetro = a + b + c;
+                Console.WriteLine("Perimetro = {0}", perimetro.ToString("0.0"));
+            }
+            else
+            {
+                double area = (((a + b) * c) / 2.0);
+                Console.WriteLine("Area = {0}", area.ToString("0.0"));
+            }
+        }
+    }
+}
+
